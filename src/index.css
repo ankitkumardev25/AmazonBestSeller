@@ -35,6 +35,7 @@ body {
   width: 100%;
   height: fit-content;
   object-fit: cover;
+  height: 280px;
 }
 
 .book h2 {

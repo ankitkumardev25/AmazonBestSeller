@@ -5,25 +5,86 @@ import './index.css'
 
 const books = [
   {
-    title: "Don't Believe Everything You Think",
-    author: '📄 Joseph Nguyen',
-    img: 'https://d2i0w0hu6hvxgc.cloudfront.net/B0BJHG532P/532bb3b4/cover.jpeg',
-    price: '220',
+    title: 'Dopamine Detox',
+    author: 'Thibaut Meurisse',
+    img: 'https://m.media-amazon.com/images/I/413tVFk--xS.jpg',
+    price: '₹190',
   },
   {
     title: 'The Alchemist',
-    author: '📄 Paulo Coelho',
-    img: 'https://d1b14unh5d6w7g.cloudfront.net/0722532938.01.S001.LXXXXXXX.jpg?Expires=1685124094&Signature=JvosOUS6f7pw4amAmmuay1esgYHiyaxO1iTD2YX2oiOuQsoqr9Lk60-59srZwimRtcfPJcJjhqmS3c5ihEoMPISWBi2zDoSyoZ-TaJUVVapHzeXylMkoYD5bEPP51a0FGEyir1PO2mxMHXCGf9xGsfyzY4nEbIzwKo~1DLJvGOw_&Key-Pair-Id=APKAIUO27P366FGALUMQ',
-    price: '295',
+    author: 'Paulo Coelho',
+    img: 'https://m.media-amazon.com/images/I/518qiLwlQ0L._SX427_BO1,204,203,200_.jpg',
+    price: '₹295',
+  },
+  {
+    title: 'The Monk Who Sold His Ferrari',
+    author: 'Robin Sharma',
+    img: 'https://m.media-amazon.com/images/I/410BqHSamiL._SX322_BO1,204,203,200_.jpg',
+    price: '₹178',
+  },
+  {
+    title: 'The Psychology of Money',
+    author: 'Morgan Housel',
+    img: 'https://m.media-amazon.com/images/I/41r6F2LRf8L._SX323_BO1,204,203,200_.jpg',
+    price: '₹248',
+  },
+  {
+    title: 'The Subtle Art of Not Giving a F*ck',
+    author: 'Mark Manson',
+    img: 'https://m.media-amazon.com/images/I/511vJPN7p5L._SX331_BO1,204,203,200_.jpg',
+    price: '₹247',
+  },
+  {
+    title: 'Think Like a Monk',
+    author: 'Jay Shetty',
+    img: 'https://m.media-amazon.com/images/I/41EwKa8jf2L._SX343_BO1,204,203,200_.jpg',
+    price: '₹200',
   },
 ]
 // const names = ['a', 'b', 'c']
 function BookList() {
   return (
     <section className="booklist">
+      <EventExamples />
       {books.map((book) => {
         return <Book {...book} key={book.title} />
       })}
+    </section>
+  )
+}
+function handleClickInput() {
+  alert('button is clicked')
+}
+
+function handleFormSubmission(e) {
+  e.preventDefault()
+  console.log('form is submitted')
+}
+
+function handleFormInput(e) {
+  console.log(e)
+  console.log(e.target)
+  console.log(e.target.name)
+  console.log(e.target.value)
+  console.log('Input is being changed')
+}
+const EventExamples = () => {
+  return (
+    <section>
+      <form onSubmit={handleFormSubmission}>
+        <h2>Typical Form</h2>
+        <input
+          onChange={handleFormInput}
+          type="text"
+          name="example"
+          style={{ margin: '1rem 0' }}
+        />
+        <button type="submit">Submit</button>
+      </form>
+
+      <div>
+        <button onClick={handleClickInput}>Click ME</button>
+      </div>
     </section>
   )
 }
