@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: lightgoldenrodyellow;
+  color: #234;
+}
+
+.booklist {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 568px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book {
+  background: #456;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.book h2 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.book h4 {
+  color: yellowgreen;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  letter-spacing: 2px;
+}
