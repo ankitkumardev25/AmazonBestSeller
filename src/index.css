@@ -29,12 +29,14 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  position: relative;
 }
 
 .book img {
   width: 100%;
   height: fit-content;
   object-fit: cover;
+  height: 460px;
 }
 
 .book h2 {
@@ -49,4 +51,23 @@ body {
   font-size: 0.9rem;
   margin-top: 0.2rem;
   letter-spacing: 2px;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: lightcoral;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: uppercase;
+  font-family: cursive;
 }
